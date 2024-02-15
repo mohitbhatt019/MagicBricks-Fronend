@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TranspotationManagment.View.StartingPage"
+             Title="StartingPage">
+
+    <Grid  BackgroundColor="SlateGray" Padding="10" Margin="0,0,0,0">
+        <VerticalStackLayout>
+            <StackLayout  Padding="10" >
+                <Label Text="Hey! What's on Your mind?"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        FontFamily="Consolas"
+                        Padding="5"/>
+
+            </StackLayout>
+
+            <!--<StackLayout  Margin="6,70,0,0">
+            <Label  Text="Property Search" FontSize="16" FontAttributes="Bold" ></Label>
+                <Label FontSize="13"  Text="buy,Rent a property/PG"></Label>
+
+                <BoxView Margin="0,20,0,0" HeightRequest="0.1" VerticalOptions="End" StyleClass="Divider" />
+            </StackLayout>
+            <StackLayout Margin="6,50,0,0">
+                <Label  Text="Post Property AD" FontSize="16" FontAttributes="Bold" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer CommandParameter="PropertySearch" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label FontSize="12" Text="sell or REnt out your Property"></Label>
+
+
+                <BoxView Margin="0,20,0,0" HeightRequest="0.1" VerticalOptions="End" Grid.ColumnSpan="9" StyleClass="Divider" />
+            </StackLayout>
+
+            <StackLayout Margin="6,50,0,0">
+                <Label Text="Post Property AD" FontSize="16" FontAttributes="Bold" ></Label>
+                <Label FontSize="12" Text="buy,Rent a property/PG"></Label>
+
+                <BoxView Margin="0,20,0,0" HeightRequest="0.1" VerticalOptions="End" Grid.ColumnSpan="9" StyleClass="Divider" />
+            </StackLayout>
+
+            <StackLayout Margin="6,50,0,0">
+                <Label Text="Home Loan , Property Services" FontSize="16" FontAttributes="Bold" ></Label>
+                <Label FontSize="12" Text="buy,Rent a property/PG"></Label>
+
+                <BoxView Margin="0,20,0,0" HeightRequest="0.1" VerticalOptions="End" Grid.ColumnSpan="9" StyleClass="Divider" />
+            </StackLayout>-->
+
+
+
+            <ListView Margin="10,90,0,0"  SeparatorVisibility="Default"  HasUnevenRows="True" RowHeight="95" x:Name="PropertyListView" >
+                <ListView.ItemTemplate>
+                    <DataTemplate  >
+
+                        <ViewCell >
+
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height=" 45" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="1"
+                           Text="{Binding Name}"
+                           FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding Description}"
+                           FontAttributes="Italic"
+                           VerticalOptions="CenterAndExpand" />
+
+                                <Image   HeightRequest="20" Aspect="AspectFill" Margin="100,0,0,0" Grid.Column="9" Source="greaterarrow" HorizontalOptions="End" VerticalOptions="EndAndExpand"></Image>
+
+                            </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentPage>

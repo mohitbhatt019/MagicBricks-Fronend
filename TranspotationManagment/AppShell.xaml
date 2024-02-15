@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TranspotationManagment.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TranspotationManagment"
+    xmlns:views="clr-namespace:TranspotationManagment.View"
+    Shell.FlyoutBehavior="Disabled"
+    Title="TranspotationManagment">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="MainPage" />
+
+</Shell>
